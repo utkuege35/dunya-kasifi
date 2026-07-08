@@ -1,73 +1,50 @@
-/**
- * main.js — Uygulama giriş noktası ve ekran yöneticisi
- */
-
-import { loadState, getState, setState } from './utils/state.js';
+import { loadState, getState } from './utils/state.js';
 import { loadCountries } from './utils/loader.js';
 import { initSplash } from './screens/splash.js';
 import { initChars } from './screens/chars.js';
 import { initMap, refreshMapStars } from './screens/map.js';
 import { initGameScreen, stopGameScreen } from './screens/game-screen.js';
 
-// ── Ekran geçişi ──
+let countries = [];
+
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
 
-// ── Başlat ──
 async function boot() {
   loadState();
 
-  // Ülkeleri yükle
-  let countries;
-  try {
-    countries = await loadCountries();
-  } catch (e) {
-    console.error('Ülkeler yüklenemedi:', e);
-    return;
-  }
-
-  // ── SPLASH ──
-  initSplash(() => {
-    if (getState().char) {
-      goToMap();
-    } else {
-      showScreen('s-chars');
+  // Önce splash göster
+  initSplash(async () => {
+    if (!countries.length) {
+      try { countries = await loadCountries(); }
+      catch (e) { alert('Veri yüklenemedi: ' + e.message); return; }
     }
+    if (getState().char) { goToMap(); }
+    else { initChars(() => goToMap()); showScreen('s-chars'); }
   });
   showScreen('s-splash');
 
-  // ── KARAKTER SEÇİMİ ──
-  initChars((charId) => {
-    goToMap();
-  });
+  // Arka planda yükle
+  try { countries = await loadCountries(); }
+  catch (e) { console.warn('Arka plan yükleme başarısız:', e); }
+}
 
-  // ── HARİTA ──
-  async function goToMap() {
-    showScreen('s-map');
-    await initMap(countries, (country) => {
-      goToGame(country);
-    });
-    refreshMapStars(countries);
-    updateAllXP();
-  }
+async function goToMap() {
+  showScreen('s-map');
+  await initMap(countries, (country) => goToGame(country));
+  refreshMapStars(countries);
+  updateAllXP();
+}
 
-  // ── OYUN ──
-  function goToGame(country) {
-    showScreen('s-game');
-    initGameScreen(
-      country,
-      () => { // Haritaya dön
-        stopGameScreen();
-        goToMap();
-      },
-      (country, room, result) => { // Oda tamamlandı
-        refreshMapStars(countries);
-        updateAllXP();
-      }
-    );
-  }
+function goToGame(country) {
+  showScreen('s-game');
+  initGameScreen(
+    country,
+    () => { stopGameScreen(); goToMap(); },
+    () => { refreshMapStars(countries); updateAllXP(); }
+  );
 }
 
 function updateAllXP() {
@@ -75,5 +52,4 @@ function updateAllXP() {
   document.querySelectorAll('[id^="xp-"]').forEach(el => { el.textContent = xp; });
 }
 
-// Başlat
 boot().catch(console.error);
