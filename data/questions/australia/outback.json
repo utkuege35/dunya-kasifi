@@ -1,0 +1,80 @@
+[
+  {
+    "id": "ob1",
+    "type": "mcq",
+    "q": "\"Kangaroo\" Türkçesi nedir?",
+    "opts": [
+      "Kanguru",
+      "Koala",
+      "Vombat",
+      "Keseli fare"
+    ],
+    "ans": 0,
+    "fb": "Kangaroo = kanguru!"
+  },
+  {
+    "id": "ob2",
+    "type": "mcq",
+    "q": "Uluru is a sacred _____ in Australia.",
+    "opts": [
+      "red rock",
+      "river",
+      "beach",
+      "forest"
+    ],
+    "ans": 0,
+    "fb": "Sacred red rock = kutsal kırmızı kaya!"
+  },
+  {
+    "id": "ob3",
+    "type": "gap",
+    "q": "Indigenous Australians are called _____.",
+    "blanks": [
+      "Aboriginal"
+    ],
+    "fb": "Aboriginal = Avustralya Yerlileri!"
+  },
+  {
+    "id": "ob4",
+    "type": "reading",
+    "ctx": "Aboriginal people lived in Australia 65,000+ years, one of the oldest cultures.",
+    "q": "How long have they lived there?",
+    "opts": [
+      "65,000+ years",
+      "1,000 years",
+      "500 years",
+      "10,000 years"
+    ],
+    "ans": 0,
+    "fb": "65,000+ years!"
+  },
+  {
+    "id": "ob5",
+    "type": "mcq",
+    "q": "\"Hot\" Türkçesi nedir?",
+    "opts": [
+      "Sıcak",
+      "Soğuk",
+      "Islak",
+      "Kuru"
+    ],
+    "ans": 0,
+    "fb": "Hot = sıcak!"
+  },
+  {
+    "id": "ob6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "people",
+      "lived",
+      "Aboriginal",
+      "years",
+      "have",
+      "65000",
+      "for"
+    ],
+    "ans": "Aboriginal people have lived for 65000 years",
+    "fb": "Aboriginal people have lived for 65000 years!"
+  }
+]

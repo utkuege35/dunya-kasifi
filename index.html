@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="theme-color" content="#08111f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Dünya Kâşifi">
+<title>Dünya Kâşifi — İngilizce Macera</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+<!-- ── SCREENS ── -->
+<div id="s-splash"  class="screen active"></div>
+<div id="s-chars"   class="screen"></div>
+<div id="s-map"     class="screen"></div>
+<div id="s-game"    class="screen">
+  <canvas id="cvs"></canvas>
+  <div id="game-hud"></div>
+  <div id="jstick-wrap">
+    <div id="jstick-base"></div>
+    <div id="jstick-knob"></div>
+  </div>
+  <div id="run-btn">🏃</div>
+  <div id="door-prompt" class="hidden">
+    <span id="dp-icon">🚪</span>
+    <span id="dp-txt">Odaya Gir</span>
+    <span class="dp-hint">TAP</span>
+  </div>
+  <div id="q-overlay" class="hidden">
+    <div id="q-backdrop"></div>
+    <div id="q-panel"></div>
+  </div>
+  <div id="rd-overlay" class="hidden">
+    <div id="rd-card"></div>
+  </div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "tk1",
+    "type": "mcq",
+    "q": "\"Skyscraper\" Türkçesi nedir?",
+    "opts": [
+      "Gökdelen",
+      "Köprü",
+      "Tünel",
+      "Park"
+    ],
+    "ans": 0,
+    "fb": "Skyscraper = gökdelen!"
+  },
+  {
+    "id": "tk2",
+    "type": "mcq",
+    "q": "Tokyo is the _____ of Japan.",
+    "opts": [
+      "capital",
+      "village",
+      "island",
+      "river"
+    ],
+    "ans": 0,
+    "fb": "Capital = başkent."
+  },
+  {
+    "id": "tk3",
+    "type": "gap",
+    "q": "The Shinkansen is a very fast _____ in Japan.",
+    "blanks": [
+      "train"
+    ],
+    "fb": "Train = tren. Shinkansen saatte 300 km!"
+  },
+  {
+    "id": "tk4",
+    "type": "mcq",
+    "q": "\"Technology\" Türkçesi nedir?",
+    "opts": [
+      "Teknoloji",
+      "Tarih",
+      "Coğrafya",
+      "Biyoloji"
+    ],
+    "ans": 0,
+    "fb": "Technology = Teknoloji!"
+  },
+  {
+    "id": "tk5",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "is",
+      "Tokyo",
+      "the",
+      "largest",
+      "city"
+    ],
+    "ans": "Tokyo is the largest city",
+    "fb": "Tokyo is the largest city!"
+  },
+  {
+    "id": "tk6",
+    "type": "reading",
+    "ctx": "Tokyo has ancient temples and modern skyscrapers. People use vending machines to buy hot coffee and umbrellas.",
+    "q": "What can you buy from vending machines?",
+    "opts": [
+      "Coffee and umbrellas",
+      "Cars",
+      "Pets",
+      "Clothes"
+    ],
+    "ans": 0,
+    "fb": "Hot coffee to umbrellas — her şey!"
+  }
+]

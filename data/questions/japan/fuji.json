@@ -1,0 +1,78 @@
+[
+  {
+    "id": "fj1",
+    "type": "mcq",
+    "q": "\"Mountain\" Türkçesi nedir?",
+    "opts": [
+      "Dağ",
+      "Deniz",
+      "Nehir",
+      "Göl"
+    ],
+    "ans": 0,
+    "fb": "Mountain = dağ!"
+  },
+  {
+    "id": "fj2",
+    "type": "mcq",
+    "q": "Mount Fuji is an active _____.",
+    "opts": [
+      "volcano",
+      "river",
+      "forest",
+      "lake"
+    ],
+    "ans": 0,
+    "fb": "Volcano = yanardağ!"
+  },
+  {
+    "id": "fj3",
+    "type": "gap",
+    "q": "Many people _____ Mount Fuji every year.",
+    "blanks": [
+      "climb"
+    ],
+    "fb": "Climb = tırmanmak!"
+  },
+  {
+    "id": "fj4",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "is",
+      "Fuji",
+      "Mount",
+      "very",
+      "tall"
+    ],
+    "ans": "Mount Fuji is very tall",
+    "fb": "Mount Fuji is very tall!"
+  },
+  {
+    "id": "fj5",
+    "type": "reading",
+    "ctx": "Fuji has snow 5 months a year. Climbing season is July to September.",
+    "q": "When is the climbing season?",
+    "opts": [
+      "July-September",
+      "All year",
+      "Winter",
+      "April-May"
+    ],
+    "ans": 0,
+    "fb": "July to September!"
+  },
+  {
+    "id": "fj6",
+    "type": "mcq",
+    "q": "\"Snow\" Türkçesi nedir?",
+    "opts": [
+      "Kar",
+      "Yağmur",
+      "Rüzgar",
+      "Fırtına"
+    ],
+    "ans": 0,
+    "fb": "Snow = kar!"
+  }
+]

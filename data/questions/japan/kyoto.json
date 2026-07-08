@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ky1",
+    "type": "mcq",
+    "q": "\"Temple\" Türkçesi nedir?",
+    "opts": [
+      "Tapınak",
+      "Fabrika",
+      "Okul",
+      "Hastane"
+    ],
+    "ans": 0,
+    "fb": "Temple = tapınak!"
+  },
+  {
+    "id": "ky2",
+    "type": "gap",
+    "q": "Kyoto is famous for cherry _____ in spring.",
+    "blanks": [
+      "blossoms"
+    ],
+    "fb": "Cherry blossoms = kiraz çiçeği!"
+  },
+  {
+    "id": "ky3",
+    "type": "mcq",
+    "q": "\"Traditional\" Türkçesi nedir?",
+    "opts": [
+      "Geleneksel",
+      "Modern",
+      "Yabancı",
+      "Hızlı"
+    ],
+    "ans": 0,
+    "fb": "Traditional = geleneksel!"
+  },
+  {
+    "id": "ky4",
+    "type": "reading",
+    "ctx": "Geisha wear beautiful kimonos and perform music and dance.",
+    "q": "What do geisha wear?",
+    "opts": [
+      "Kimonos",
+      "Jeans",
+      "Suits",
+      "Uniforms"
+    ],
+    "ans": 0,
+    "fb": "Geisha wear kimonos!"
+  },
+  {
+    "id": "ky5",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "wear",
+      "Geisha",
+      "beautiful",
+      "kimonos"
+    ],
+    "ans": "Geisha wear beautiful kimonos",
+    "fb": "Geisha wear beautiful kimonos!"
+  },
+  {
+    "id": "ky6",
+    "type": "mcq",
+    "q": "\"Season\" Türkçesi nedir?",
+    "opts": [
+      "Mevsim",
+      "Zaman",
+      "Yıl",
+      "Ay"
+    ],
+    "ans": 0,
+    "fb": "Season = mevsim!"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ar1",
+    "type": "mcq",
+    "q": "\"Painting\" Türkçesi nedir?",
+    "opts": [
+      "Resim/Tablo",
+      "Heykel",
+      "Fotoğraf",
+      "Film"
+    ],
+    "ans": 0,
+    "fb": "Painting = resim/tablo!"
+  },
+  {
+    "id": "ar2",
+    "type": "mcq",
+    "q": "Leonardo da Vinci painted the _____.",
+    "opts": [
+      "Mona Lisa",
+      "Eiffel Tower",
+      "Colosseum",
+      "Big Ben"
+    ],
+    "ans": 0,
+    "fb": "Mona Lisa!"
+  },
+  {
+    "id": "ar3",
+    "type": "gap",
+    "q": "Michelangelo painted the _____ Chapel.",
+    "blanks": [
+      "Sistine"
+    ],
+    "fb": "Sistine Chapel!"
+  },
+  {
+    "id": "ar4",
+    "type": "reading",
+    "ctx": "Renaissance means rebirth in French. Italian artists created masterpieces in the 14th-17th centuries.",
+    "q": "What does Renaissance mean?",
+    "opts": [
+      "Rebirth",
+      "Revolution",
+      "Art",
+      "Peace"
+    ],
+    "ans": 0,
+    "fb": "Rebirth = yeniden doğuş!"
+  },
+  {
+    "id": "ar5",
+    "type": "mcq",
+    "q": "\"Museum\" Türkçesi nedir?",
+    "opts": [
+      "Müze",
+      "Okul",
+      "Kütüphane",
+      "Tiyatro"
+    ],
+    "ans": 0,
+    "fb": "Museum = müze!"
+  },
+  {
+    "id": "ar6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "painted",
+      "Vinci",
+      "da",
+      "the",
+      "Mona",
+      "Lisa"
+    ],
+    "ans": "Da Vinci painted the Mona Lisa",
+    "fb": "Da Vinci painted the Mona Lisa!"
+  }
+]

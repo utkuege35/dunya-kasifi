@@ -1,0 +1,79 @@
+[
+  {
+    "id": "py1",
+    "type": "mcq",
+    "q": "\"Desert\" Türkçesi nedir?",
+    "opts": [
+      "Çöl",
+      "Orman",
+      "Okyanus",
+      "Dağ"
+    ],
+    "ans": 0,
+    "fb": "Desert = çöl!"
+  },
+  {
+    "id": "py2",
+    "type": "mcq",
+    "q": "The Great Pyramid was built for pharaoh _____.",
+    "opts": [
+      "Khufu",
+      "Cleopatra",
+      "Ramses",
+      "Caesar"
+    ],
+    "ans": 0,
+    "fb": "Pharaoh Khufu!"
+  },
+  {
+    "id": "py3",
+    "type": "gap",
+    "q": "Ancient Egyptians used _____ to write.",
+    "blanks": [
+      "hieroglyphics"
+    ],
+    "fb": "Hieroglyphics = resimli yazı!"
+  },
+  {
+    "id": "py4",
+    "type": "reading",
+    "ctx": "The Great Pyramid has 2.3 million stone blocks each weighing 2.5-15 tons.",
+    "q": "How many stone blocks?",
+    "opts": [
+      "2.3 million",
+      "1 million",
+      "5 million",
+      "500,000"
+    ],
+    "ans": 0,
+    "fb": "2.3 million = 2,3 milyon blok!"
+  },
+  {
+    "id": "py5",
+    "type": "mcq",
+    "q": "\"King\" Türkçesi nedir?",
+    "opts": [
+      "Kral",
+      "Kraliçe",
+      "Prens",
+      "Asker"
+    ],
+    "ans": 0,
+    "fb": "King = kral!"
+  },
+  {
+    "id": "py6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "is",
+      "Pyramid",
+      "Great",
+      "a",
+      "the",
+      "wonder"
+    ],
+    "ans": "The Great Pyramid is a wonder",
+    "fb": "The Great Pyramid is a wonder!"
+  }
+]

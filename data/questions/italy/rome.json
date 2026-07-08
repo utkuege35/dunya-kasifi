@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ro1",
+    "type": "mcq",
+    "q": "\"Ancient\" Türkçesi nedir?",
+    "opts": [
+      "Antik/Eski",
+      "Yeni",
+      "Modern",
+      "Küçük"
+    ],
+    "ans": 0,
+    "fb": "Ancient = antik!"
+  },
+  {
+    "id": "ro2",
+    "type": "mcq",
+    "q": "The Colosseum was built for _____ fights.",
+    "opts": [
+      "gladiator",
+      "football",
+      "swimming",
+      "music"
+    ],
+    "ans": 0,
+    "fb": "Gladiator fights = gladyatör dövüşleri!"
+  },
+  {
+    "id": "ro3",
+    "type": "gap",
+    "q": "Rome is called the \"Eternal _____.\"",
+    "blanks": [
+      "City"
+    ],
+    "fb": "Eternal City = Ebedi Şehir!"
+  },
+  {
+    "id": "ro4",
+    "type": "reading",
+    "ctx": "The Pantheon dome has an opening called \"oculus\" meaning \"eye\" in Latin. Built 2000 years ago.",
+    "q": "What does oculus mean?",
+    "opts": [
+      "Eye",
+      "Window",
+      "Door",
+      "Star"
+    ],
+    "ans": 0,
+    "fb": "Oculus = göz (Latince)!"
+  },
+  {
+    "id": "ro5",
+    "type": "mcq",
+    "q": "\"History\" Türkçesi nedir?",
+    "opts": [
+      "Tarih",
+      "Coğrafya",
+      "Matematik",
+      "Fen"
+    ],
+    "ans": 0,
+    "fb": "History = tarih!"
+  },
+  {
+    "id": "ro6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "Colosseum",
+      "was",
+      "the",
+      "built",
+      "long",
+      "ago"
+    ],
+    "ans": "The Colosseum was built long ago",
+    "fb": "The Colosseum was built long ago!"
+  }
+]

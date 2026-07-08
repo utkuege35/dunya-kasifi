@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ni1",
+    "type": "mcq",
+    "q": "\"River\" Türkçesi nedir?",
+    "opts": [
+      "Nehir",
+      "Göl",
+      "Deniz",
+      "Dere"
+    ],
+    "ans": 0,
+    "fb": "River = nehir!"
+  },
+  {
+    "id": "ni2",
+    "type": "mcq",
+    "q": "The Nile is the _____ river in the world.",
+    "opts": [
+      "longest",
+      "widest",
+      "deepest",
+      "fastest"
+    ],
+    "ans": 0,
+    "fb": "Longest = en uzun!"
+  },
+  {
+    "id": "ni3",
+    "type": "gap",
+    "q": "The Nile flows through _____ in Africa.",
+    "blanks": [
+      "Egypt"
+    ],
+    "fb": "Egypt = Mısır!"
+  },
+  {
+    "id": "ni4",
+    "type": "reading",
+    "ctx": "Egyptians called the Nile black because of dark fertile soil left after floods.",
+    "q": "Why called black?",
+    "opts": [
+      "Dark fertile soil",
+      "Black water",
+      "Black fish",
+      "Flows at night"
+    ],
+    "ans": 0,
+    "fb": "Dark fertile soil = koyu verimli toprak!"
+  },
+  {
+    "id": "ni5",
+    "type": "mcq",
+    "q": "\"Water\" Türkçesi nedir?",
+    "opts": [
+      "Su",
+      "Toprak",
+      "Hava",
+      "Ateş"
+    ],
+    "ans": 0,
+    "fb": "Water = su!"
+  },
+  {
+    "id": "ni6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "longest",
+      "Nile",
+      "the",
+      "is",
+      "river",
+      "the"
+    ],
+    "ans": "The Nile is the longest river",
+    "fb": "The Nile is the longest river!"
+  }
+]

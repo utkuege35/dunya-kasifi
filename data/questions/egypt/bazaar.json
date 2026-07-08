@@ -1,0 +1,79 @@
+[
+  {
+    "id": "bz1",
+    "type": "mcq",
+    "q": "\"Market\" Türkçesi nedir?",
+    "opts": [
+      "Pazar/Çarşı",
+      "Okul",
+      "Hastane",
+      "Park"
+    ],
+    "ans": 0,
+    "fb": "Market = pazar!"
+  },
+  {
+    "id": "bz2",
+    "type": "gap",
+    "q": "Egyptians use the Egyptian _____ as currency.",
+    "blanks": [
+      "pound"
+    ],
+    "fb": "Pound = lira!"
+  },
+  {
+    "id": "bz3",
+    "type": "mcq",
+    "q": "\"Bargain\" Türkçesi nedir?",
+    "opts": [
+      "Pazarlık",
+      "Satın almak",
+      "Kaçmak",
+      "Beklemek"
+    ],
+    "ans": 0,
+    "fb": "Bargain = pazarlık!"
+  },
+  {
+    "id": "bz4",
+    "type": "reading",
+    "ctx": "Khan el-Khalili bazaar in Cairo is 600+ years old, selling spices, gold, and crafts.",
+    "q": "What is sold there?",
+    "opts": [
+      "Spices, gold, crafts",
+      "Cars",
+      "Books",
+      "Electronics"
+    ],
+    "ans": 0,
+    "fb": "Spices, gold, crafts!"
+  },
+  {
+    "id": "bz5",
+    "type": "mcq",
+    "q": "\"Gold\" Türkçesi nedir?",
+    "opts": [
+      "Altın",
+      "Gümüş",
+      "Bakır",
+      "Demir"
+    ],
+    "ans": 0,
+    "fb": "Gold = altın!"
+  },
+  {
+    "id": "bz6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "years",
+      "bazaar",
+      "600",
+      "old",
+      "the",
+      "is"
+    ],
+    "ans": "The bazaar is 600 years old",
+    "fb": "The bazaar is 600 years old!"
+  }
+]

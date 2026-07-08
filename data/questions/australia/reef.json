@@ -1,0 +1,81 @@
+[
+  {
+    "id": "rf1",
+    "type": "mcq",
+    "q": "\"Ocean\" Türkçesi nedir?",
+    "opts": [
+      "Okyanus",
+      "Göl",
+      "Nehir",
+      "Dere"
+    ],
+    "ans": 0,
+    "fb": "Ocean = okyanus!"
+  },
+  {
+    "id": "rf2",
+    "type": "mcq",
+    "q": "Great Barrier Reef is the world's largest coral _____.",
+    "opts": [
+      "reef",
+      "rock",
+      "sand",
+      "cave"
+    ],
+    "ans": 0,
+    "fb": "Coral reef = mercan resifi!"
+  },
+  {
+    "id": "rf3",
+    "type": "gap",
+    "q": "The reef is home to _____ of fish species.",
+    "blanks": [
+      "thousands"
+    ],
+    "fb": "Thousands = binlerce!"
+  },
+  {
+    "id": "rf4",
+    "type": "reading",
+    "ctx": "Great Barrier Reef stretches 2,300 km. Climate change causes coral bleaching.",
+    "q": "What threatens the reef?",
+    "opts": [
+      "Climate change",
+      "Tourism",
+      "Fishing",
+      "Earthquakes"
+    ],
+    "ans": 0,
+    "fb": "Climate change = iklim değişikliği!"
+  },
+  {
+    "id": "rf5",
+    "type": "mcq",
+    "q": "\"Fish\" Türkçesi nedir?",
+    "opts": [
+      "Balık",
+      "Köpek",
+      "Kuş",
+      "At"
+    ],
+    "ans": 0,
+    "fb": "Fish = balık!"
+  },
+  {
+    "id": "rf6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "reef",
+      "largest",
+      "Barrier",
+      "Great",
+      "coral",
+      "the",
+      "is",
+      "the"
+    ],
+    "ans": "The Great Barrier Reef is the largest coral reef",
+    "fb": "The Great Barrier Reef is the largest coral reef!"
+  }
+]

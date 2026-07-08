@@ -1,0 +1,78 @@
+[
+  {
+    "id": "am1",
+    "type": "mcq",
+    "q": "\"Forest\" Türkçesi nedir?",
+    "opts": [
+      "Orman",
+      "Çöl",
+      "Okyanus",
+      "Dağ"
+    ],
+    "ans": 0,
+    "fb": "Forest = orman!"
+  },
+  {
+    "id": "am2",
+    "type": "mcq",
+    "q": "The Amazon is the world's largest _____.",
+    "opts": [
+      "rainforest",
+      "desert",
+      "ocean",
+      "mountain"
+    ],
+    "ans": 0,
+    "fb": "Rainforest = yağmur ormanı!"
+  },
+  {
+    "id": "am3",
+    "type": "gap",
+    "q": "The Amazon River flows through _____ America.",
+    "blanks": [
+      "South"
+    ],
+    "fb": "South America = Güney Amerika!"
+  },
+  {
+    "id": "am4",
+    "type": "reading",
+    "ctx": "The Amazon produces 20% of the world's oxygen. It has over 40,000 plant species.",
+    "q": "Why is Amazon called lungs of the Earth?",
+    "opts": [
+      "Produces oxygen",
+      "It is large",
+      "Many animals",
+      "Always green"
+    ],
+    "ans": 0,
+    "fb": "20% oxygen = %20 oksijen!"
+  },
+  {
+    "id": "am5",
+    "type": "mcq",
+    "q": "\"River\" Türkçesi nedir?",
+    "opts": [
+      "Nehir",
+      "Dağ",
+      "Ada",
+      "Göl"
+    ],
+    "ans": 0,
+    "fb": "River = nehir!"
+  },
+  {
+    "id": "am6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "has",
+      "Amazon",
+      "the",
+      "many",
+      "species"
+    ],
+    "ans": "The Amazon has many species",
+    "fb": "The Amazon has many species!"
+  }
+]

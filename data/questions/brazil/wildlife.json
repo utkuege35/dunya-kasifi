@@ -1,0 +1,78 @@
+[
+  {
+    "id": "wl1",
+    "type": "mcq",
+    "q": "\"Parrot\" Türkçesi nedir?",
+    "opts": [
+      "Papağan",
+      "Kartal",
+      "Kelebek",
+      "Aslan"
+    ],
+    "ans": 0,
+    "fb": "Parrot = papağan!"
+  },
+  {
+    "id": "wl2",
+    "type": "mcq",
+    "q": "Which animal is Brazil's symbol?",
+    "opts": [
+      "Jaguar",
+      "Elephant",
+      "Kangaroo",
+      "Penguin"
+    ],
+    "ans": 0,
+    "fb": "Jaguar!"
+  },
+  {
+    "id": "wl3",
+    "type": "gap",
+    "q": "Dolphins and _____ are mammals.",
+    "blanks": [
+      "whales"
+    ],
+    "fb": "Whales = balinalar!"
+  },
+  {
+    "id": "wl4",
+    "type": "reading",
+    "ctx": "The capybara is the world's largest rodent. It looks like a giant guinea pig and weighs up to 65 kg.",
+    "q": "What is the capybara?",
+    "opts": [
+      "Largest rodent",
+      "A fish",
+      "A bird",
+      "A reptile"
+    ],
+    "ans": 0,
+    "fb": "Largest rodent = en büyük kemirgen!"
+  },
+  {
+    "id": "wl5",
+    "type": "mcq",
+    "q": "\"Butterfly\" Türkçesi nedir?",
+    "opts": [
+      "Kelebek",
+      "Arı",
+      "Sinek",
+      "Karınca"
+    ],
+    "ans": 0,
+    "fb": "Butterfly = kelebek!"
+  },
+  {
+    "id": "wl6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "capybara",
+      "near",
+      "the",
+      "lives",
+      "water"
+    ],
+    "ans": "The capybara lives near water",
+    "fb": "The capybara lives near water!"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ri1",
+    "type": "mcq",
+    "q": "\"Beach\" Türkçesi nedir?",
+    "opts": [
+      "Plaj",
+      "Dağ",
+      "Nehir",
+      "Orman"
+    ],
+    "ans": 0,
+    "fb": "Beach = plaj!"
+  },
+  {
+    "id": "ri2",
+    "type": "gap",
+    "q": "Rio carnival is the world's largest _____ celebration.",
+    "blanks": [
+      "street"
+    ],
+    "fb": "Street = sokak!"
+  },
+  {
+    "id": "ri3",
+    "type": "mcq",
+    "q": "What is samba?",
+    "opts": [
+      "Music and dance",
+      "Food",
+      "Sport",
+      "A city"
+    ],
+    "ans": 0,
+    "fb": "Samba = müzik ve dans!"
+  },
+  {
+    "id": "ri4",
+    "type": "reading",
+    "ctx": "Christ the Redeemer is 38 meters tall on Corcovado Mountain, completed in 1931.",
+    "q": "How tall is Christ the Redeemer?",
+    "opts": [
+      "38 meters",
+      "100 meters",
+      "20 meters",
+      "50 meters"
+    ],
+    "ans": 0,
+    "fb": "38 meters!"
+  },
+  {
+    "id": "ri5",
+    "type": "mcq",
+    "q": "\"Music\" Türkçesi nedir?",
+    "opts": [
+      "Müzik",
+      "Spor",
+      "Sanat",
+      "Dans"
+    ],
+    "ans": 0,
+    "fb": "Music = müzik!"
+  },
+  {
+    "id": "ri6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "famous",
+      "Rio",
+      "its",
+      "for",
+      "carnival",
+      "is"
+    ],
+    "ans": "Rio is famous for its carnival",
+    "fb": "Rio is famous for its carnival!"
+  }
+]

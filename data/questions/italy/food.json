@@ -1,0 +1,78 @@
+[
+  {
+    "id": "fo1",
+    "type": "mcq",
+    "q": "\"Delicious\" Türkçesi nedir?",
+    "opts": [
+      "Lezzetli",
+      "Sıcak",
+      "Pahalı",
+      "Taze"
+    ],
+    "ans": 0,
+    "fb": "Delicious = lezzetli!"
+  },
+  {
+    "id": "fo2",
+    "type": "gap",
+    "q": "Pizza was invented in _____, Italy.",
+    "blanks": [
+      "Naples"
+    ],
+    "fb": "Naples = Napoli!"
+  },
+  {
+    "id": "fo3",
+    "type": "mcq",
+    "q": "What is pasta made from?",
+    "opts": [
+      "Flour and water",
+      "Rice",
+      "Potatoes",
+      "Corn"
+    ],
+    "ans": 0,
+    "fb": "Flour and water = un ve su!"
+  },
+  {
+    "id": "fo4",
+    "type": "reading",
+    "ctx": "In Italy: never put ketchup on pasta. Cappuccino is only for mornings. Lunch can last 2 hours.",
+    "q": "When do Italians drink cappuccino?",
+    "opts": [
+      "Morning",
+      "Night",
+      "With dinner",
+      "After lunch"
+    ],
+    "ans": 0,
+    "fb": "Mornings only = sadece sabahları!"
+  },
+  {
+    "id": "fo5",
+    "type": "mcq",
+    "q": "\"Cheese\" Türkçesi nedir?",
+    "opts": [
+      "Peynir",
+      "Ekmek",
+      "Et",
+      "Balık"
+    ],
+    "ans": 0,
+    "fb": "Cheese = peynir!"
+  },
+  {
+    "id": "fo6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "is",
+      "pasta",
+      "from",
+      "made",
+      "flour"
+    ],
+    "ans": "Pasta is made from flour",
+    "fb": "Pasta is made from flour!"
+  }
+]

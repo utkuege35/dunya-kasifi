@@ -1,0 +1,57 @@
+[
+  {
+    "id": "japan",
+    "name": "Japonya",
+    "flag": "🇯🇵",
+    "color": "#ff6b6b",
+    "rooms": [
+      { "id": "tokyo",  "name": "Tokyo Şehri",      "icon": "🏙️", "desc": "Gökdelenler arasında macera" },
+      { "id": "kyoto",  "name": "Kyoto Tapınağı",   "icon": "⛩️", "desc": "Antik tapınakların sırrı" },
+      { "id": "fuji",   "name": "Fuji Dağı",         "icon": "🗻", "desc": "Zirvede gizli hazine" }
+    ]
+  },
+  {
+    "id": "brazil",
+    "name": "Brezilya",
+    "flag": "🇧🇷",
+    "color": "#51cf66",
+    "rooms": [
+      { "id": "amazon",   "name": "Amazon Ormanı",     "icon": "🌿", "desc": "Gizemli ormanı keşfet" },
+      { "id": "rio",      "name": "Rio de Janeiro",    "icon": "🎭", "desc": "Karnaval şehrinde eğlen" },
+      { "id": "wildlife", "name": "Vahşi Yaşam",       "icon": "🦜", "desc": "Egzotik hayvanlarla tanış" }
+    ]
+  },
+  {
+    "id": "italy",
+    "name": "İtalya",
+    "flag": "🇮🇹",
+    "color": "#74b9ff",
+    "rooms": [
+      { "id": "rome", "name": "Roma",                 "icon": "🏛️", "desc": "Antik Roma'nın sırları" },
+      { "id": "food", "name": "İtalyan Mutfağı",      "icon": "🍝", "desc": "Lezzetli maceralar" },
+      { "id": "art",  "name": "Rönesans Sanatı",      "icon": "🎨", "desc": "Büyük ustaların eserleri" }
+    ]
+  },
+  {
+    "id": "egypt",
+    "name": "Mısır",
+    "flag": "🇪🇬",
+    "color": "#ffd43b",
+    "rooms": [
+      { "id": "pyramids", "name": "Piramitler",       "icon": "🔺", "desc": "Antik sırları çöz" },
+      { "id": "nile",     "name": "Nil Nehri",         "icon": "🌊", "desc": "Uygarlığın kaynağı" },
+      { "id": "bazaar",   "name": "Kahire Çarşısı",   "icon": "🛒", "desc": "Tarihi çarşıda macera" }
+    ]
+  },
+  {
+    "id": "australia",
+    "name": "Avustralya",
+    "flag": "🇦🇺",
+    "color": "#d4a8ff",
+    "rooms": [
+      { "id": "reef",     "name": "Mercan Resifi",    "icon": "🐠", "desc": "Denizaltı dünyasını keşfet" },
+      { "id": "outback",  "name": "Outback",           "icon": "🏜️", "desc": "Çöl macerasına hazır mısın?" },
+      { "id": "sydney",   "name": "Sidney",            "icon": "🏗️", "desc": "Liman şehrinin manzarası" }
+    ]
+  }
+]

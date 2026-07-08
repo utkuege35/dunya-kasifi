@@ -1,0 +1,80 @@
+[
+  {
+    "id": "sy1",
+    "type": "mcq",
+    "q": "\"Bridge\" Türkçesi nedir?",
+    "opts": [
+      "Köprü",
+      "Tünel",
+      "Yol",
+      "Bina"
+    ],
+    "ans": 0,
+    "fb": "Bridge = köprü!"
+  },
+  {
+    "id": "sy2",
+    "type": "mcq",
+    "q": "Sydney Opera House looks like _____.",
+    "opts": [
+      "shells or sails",
+      "pyramid",
+      "castle",
+      "skyscraper"
+    ],
+    "ans": 0,
+    "fb": "Shells or sails = kabuklar veya yelkenler!"
+  },
+  {
+    "id": "sy3",
+    "type": "gap",
+    "q": "Sydney is the largest _____ in Australia.",
+    "blanks": [
+      "city"
+    ],
+    "fb": "City = şehir!"
+  },
+  {
+    "id": "sy4",
+    "type": "reading",
+    "ctx": "Opera House designed by Jørn Utzon, took 14 years to build, opened in 1973.",
+    "q": "Who designed the Opera House?",
+    "opts": [
+      "Jørn Utzon",
+      "Australian",
+      "British",
+      "Government"
+    ],
+    "ans": 0,
+    "fb": "Jørn Utzon, Danimarkalı mimar!"
+  },
+  {
+    "id": "sy5",
+    "type": "mcq",
+    "q": "\"Harbour\" Türkçesi nedir?",
+    "opts": [
+      "Liman",
+      "Ada",
+      "Plaj",
+      "Deniz"
+    ],
+    "ans": 0,
+    "fb": "Harbour = liman!"
+  },
+  {
+    "id": "sy6",
+    "type": "order",
+    "q": "Cümleyi kur:",
+    "words": [
+      "largest",
+      "Sydney",
+      "city",
+      "is",
+      "Australia",
+      "in",
+      "the"
+    ],
+    "ans": "Sydney is the largest city in Australia",
+    "fb": "Sydney is the largest city in Australia!"
+  }
+]
