@@ -42,6 +42,8 @@ html, body {
   display: none;
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
 }
 .screen.active { display: flex; }
@@ -186,8 +188,19 @@ html, body {
 .cpin:hover .pflag { transform: scale(1.3) translateY(-4px); }
 
 /* ── GAME SCREEN ── */
-#s-game { background: #000; position: relative; overflow: hidden; }
-#cvs { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+#s-game {
+  background: #000;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+#cvs {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 /* HUD */
 #game-hud {
@@ -437,5 +450,5 @@ html, body {
 .rd-btns   { display: flex; flex-direction: column; gap: 10px; }
 
 /* ── ANIMATIONS ── */
-@keyframes float { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-12px)} }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 @keyframes pop   { 0%{transform:scale(.3)} 65%{transform:scale(1.2)} 100%{transform:scale(1)} }
