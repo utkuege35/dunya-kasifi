@@ -1,8 +1,3 @@
-/**
- * game-screen.js — Oyun ekranı kontrolcüsü
- * HUD, joystick, kapı prompt yönetimi
- */
-
 import { initGame, stopGame, setJoyDir, setSprinting, triggerNearDoor } from '../engine/game.js';
 import { startQuestionSession } from '../ui/questions.js';
 import { showRoomDone } from '../ui/roomdone.js';
@@ -12,8 +7,7 @@ let _onLeave = null;
 let _onRoomComplete = null;
 let _currentCountry = null;
 
-/** Oyun ekranını başlat */
-export function initGameScreen(country, onLeave, onRoomComplete) {
+export async function initGameScreen(country, onLeave, onRoomComplete) {
   _onLeave = onLeave;
   _onRoomComplete = onRoomComplete;
   _currentCountry = country;
@@ -25,14 +19,19 @@ export function initGameScreen(country, onLeave, onRoomComplete) {
   initRunButton();
   initDoorPrompt();
 
+  // Canvas boyutlanması için bekle
+  await new Promise(r => setTimeout(r, 80));
+
   const canvas = document.getElementById('cvs');
+  canvas.width  = canvas.parentElement.clientWidth;
+  canvas.height = canvas.parentElement.clientHeight;
+
   initGame(country, canvas, {
     onDoorNear: handleDoorNear,
     onUpdate: updateXPDisplay,
   });
 }
 
-/** Oyunu durdur */
 export function stopGameScreen() {
   stopGame();
 }
@@ -56,7 +55,6 @@ function updateXPDisplay() {
   if (mapEl) mapEl.textContent = getState().xp;
 }
 
-// ── Joystick ──
 function initJoystick() {
   const wrap = document.getElementById('jstick-wrap');
   const knob = document.getElementById('jstick-knob');
@@ -92,7 +90,6 @@ function initJoystick() {
   window.addEventListener('mouseup',   () => { if (active) end(); });
 }
 
-// ── Klavye ──
 const KB = {};
 function initKeyboard() {
   window.addEventListener('keydown', e => {
@@ -120,7 +117,6 @@ function updateKeyDir() {
   setJoyDir(x, y);
 }
 
-// ── Sprint butonu ──
 function initRunButton() {
   const btn = document.getElementById('run-btn');
   btn.addEventListener('touchstart', e => { e.preventDefault(); setSprinting(true); btn.classList.add('pressed'); }, { passive: false });
@@ -129,7 +125,6 @@ function initRunButton() {
   window.addEventListener('mouseup', () => { setSprinting(false); btn.classList.remove('pressed'); });
 }
 
-// ── Kapı prompt ──
 function initDoorPrompt() {
   document.getElementById('door-prompt').addEventListener('click', () => {
     const door = triggerNearDoor();
@@ -153,18 +148,9 @@ function handleDoorNear(door) {
 function openDoor(room) {
   document.getElementById('door-prompt').classList.add('hidden');
   startQuestionSession(_currentCountry, room, (result) => {
-    showRoomDone(
-      result,
-      _currentCountry,
-      room,
-      (nextRoom) => {
-        // Sonraki oda — oyun devam eder
-        _onRoomComplete?.(_currentCountry, room, result);
-      },
-      () => {
-        stopGame();
-        _onLeave?.();
-      }
+    showRoomDone(result, _currentCountry, room,
+      (nextRoom) => { _onRoomComplete?.(_currentCountry, room, result); },
+      () => { stopGame(); _onLeave?.(); }
     );
     _onRoomComplete?.(_currentCountry, room, result);
   });
