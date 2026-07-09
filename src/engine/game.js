@@ -44,8 +44,8 @@ export function initGame(country, canvas, callbacks = {}) {
   state.country = country;
   state.theme = THEMES[country.id] || THEMES.japan;
   state.world = generateWorld(country, WORLD_SIZE, TILE);
-  state.W = canvas.width = canvas.parentElement.clientWidth;
-  state.H = canvas.height = canvas.parentElement.clientHeight;
+  state.W = canvas.width = window.innerWidth;
+state.H = canvas.height = window.innerHeight;
   state.p = { wx: TILE * 14.5, wy: TILE * 21, angle: Math.PI * 1.5, speed: 0, animTime: 0, bobPhase: 0, runT: 0 };
   state.cam = { wx: 0, wy: 0 };
   state.joyDir = { x: 0, y: 0 };
