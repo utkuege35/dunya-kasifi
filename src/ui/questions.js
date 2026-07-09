@@ -1,6 +1,5 @@
 /**
  * questions.js — Soru modalı UI bileşeni
- * Soru panelini render eder, cevapları işler
  */
 
 import { speak } from '../utils/tts.js';
@@ -13,15 +12,11 @@ let _onFinish = null;
 const LABELS = { mcq: '🔤 Kelime', gap: '✏️ Boşluk Doldur', reading: '📖 Okuma', order: '🔀 Cümle Kur' };
 const LETTERS = ['A', 'B', 'C', 'D'];
 
-/** Oda için soru oturumu başlat */
 export async function startQuestionSession(country, room, onFinish) {
   session = { country, room, questions: [], idx: 0, correct: 0, streak: 0 };
   _onFinish = onFinish;
 
-  // Soruları yükle
   const allQuestions = await loadQuestions(country.id, room.id);
-
-  // Kullanılmamış soruları filtrele
   const used = new Set(getUsedQuestions(country.id, room.id));
   let available = allQuestions.filter(q => !used.has(q.id));
   if (available.length < 3) {
@@ -29,77 +24,59 @@ export async function startQuestionSession(country, room, onFinish) {
     available = allQuestions;
   }
 
-  // 5 rastgele soru seç
   session.questions = available
     .sort(() => Math.random() - 0.5)
     .slice(0, Math.min(5, available.length));
 
-  // Kullanıldı olarak işaretle
   session.questions.forEach(q => markQuestionUsed(country.id, room.id, q.id));
 
-  // UI göster
-  showPanel();
+  document.getElementById('q-overlay').classList.remove('hidden');
   renderQuestion();
 }
 
-/** Soruları kapat */
 export function closeQuestions() {
   document.getElementById('q-overlay').classList.add('hidden');
-}
-
-function showPanel() {
-  document.getElementById('q-overlay').classList.remove('hidden');
 }
 
 function renderQuestion() {
   const q = session.questions[session.idx];
   const total = session.questions.length;
+  const panel = document.getElementById('q-panel');
 
-  // Progress
-  document.getElementById('qp-badge').textContent = LABELS[q.type] || q.type;
-  document.getElementById('qp-prog').textContent = `${session.idx + 1} / ${total}`;
-  document.getElementById('qp-pfill').style.width = `${(session.idx / total) * 100}%`;
+  // Paneli sıfırdan oluştur
+  panel.innerHTML = `
+    <div class="qp-head">
+      <span class="qp-badge">${LABELS[q.type] || q.type}</span>
+      <span class="qp-prog">${session.idx + 1} / ${total}</span>
+    </div>
+    <div class="qp-pbar">
+      <div class="qp-pfill" style="width:${(session.idx / total) * 100}%"></div>
+    </div>
+    ${q.ctx ? `<div class="qp-ctx">${q.ctx}</div>` : ''}
+    <div class="qp-q">
+      <button class="qp-tts" id="tts-btn">🔊</button>
+      ${q.q}
+    </div>
+    <div id="q-answer-area"></div>
+    <div class="qp-fb" id="qfb"></div>
+    <button class="nxt-btn" id="nxbtn">Devam Et ➡️</button>
+  `;
 
-  const body = document.getElementById('q-panel');
-  // Sadece head + pbar'ı koru, body'i temizle
-  const head = body.querySelector('.qp-head');
-  const pbar = body.querySelector('.qp-pbar');
+  document.getElementById('tts-btn').addEventListener('click', () => speak(q.q));
+  document.getElementById('nxbtn').addEventListener('click', nextQuestion);
 
-  // Mevcut içerik temizle (head ve pbar hariç)
-  [...body.children].forEach(c => {
-    if (c !== head && c !== pbar) c.remove();
-  });
-
-  // Okuma parçası
-  if (q.ctx) {
-    const ctx = el('div', 'qp-ctx', q.ctx);
-    body.appendChild(ctx);
-  }
-
-  // Soru metni
-  const qDiv = el('div', 'qp-q');
-  const ttsBtn = el('button', 'qp-tts', '🔊');
-  ttsBtn.addEventListener('click', () => speak(q.q));
-  qDiv.appendChild(ttsBtn);
-  qDiv.appendChild(document.createTextNode(q.q));
-  body.appendChild(qDiv);
-
-  // Soru tipi
-  if (q.type === 'mcq' || q.type === 'reading') buildMCQ(q, body);
-  else if (q.type === 'gap')   buildGap(q, body);
-  else if (q.type === 'order') buildOrder(q, body);
-
-  // Geri bildirim + devam
-  body.appendChild(el('div', 'qp-fb', '', 'qfb'));
-  const nxtBtn = el('button', 'nxt-btn', 'Devam Et ➡️', 'nxbtn');
-  nxtBtn.addEventListener('click', nextQuestion);
-  body.appendChild(nxtBtn);
+  const area = document.getElementById('q-answer-area');
+  if (q.type === 'mcq' || q.type === 'reading') buildMCQ(q, area);
+  else if (q.type === 'gap') buildGap(q, area);
+  else if (q.type === 'order') buildOrder(q, area);
 }
 
-function buildMCQ(q, body) {
-  const wrap = el('div', 'qp-opts');
+function buildMCQ(q, area) {
+  const wrap = document.createElement('div');
+  wrap.className = 'qp-opts';
   q.opts.forEach((txt, i) => {
-    const btn = el('div', 'qp-opt');
+    const btn = document.createElement('div');
+    btn.className = 'qp-opt';
     btn.innerHTML = `<span class="opt-ltr">${LETTERS[i]}</span><span>${txt}</span>`;
     btn.addEventListener('click', () => {
       if (btn.classList.contains('disabled')) return;
@@ -115,15 +92,18 @@ function buildMCQ(q, body) {
     });
     wrap.appendChild(btn);
   });
-  body.appendChild(wrap);
+  area.appendChild(wrap);
 }
 
-function buildGap(q, body) {
-  const row = el('div', 'gap-row');
-  const inp = el('input', 'gap-inp');
+function buildGap(q, area) {
+  const row = document.createElement('div');
+  row.className = 'gap-row';
+  const inp = document.createElement('input');
+  inp.className = 'gap-inp';
   inp.placeholder = 'Cevabı yaz...';
-  const btn = el('button', 'chk-btn', '✓');
-
+  const btn = document.createElement('button');
+  btn.className = 'chk-btn';
+  btn.textContent = '✓';
   const check = () => {
     if (inp.disabled) return;
     inp.disabled = true; btn.disabled = true;
@@ -134,16 +114,18 @@ function buildGap(q, body) {
   inp.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
   btn.addEventListener('click', check);
   row.appendChild(inp); row.appendChild(btn);
-  body.appendChild(row);
+  area.appendChild(row);
   setTimeout(() => inp.focus(), 120);
 }
 
 let _ordSel = [];
-function buildOrder(q, body) {
+function buildOrder(q, area) {
   _ordSel = [];
   const shuffled = q.words.slice().sort(() => Math.random() - 0.5);
-  const ansRow = el('div', 'wans');
-  const bank = el('div', 'wbank');
+  const ansRow = document.createElement('div');
+  ansRow.className = 'wans';
+  const bank = document.createElement('div');
+  bank.className = 'wbank';
 
   ansRow.addEventListener('click', e => {
     const chip = e.target.closest('.wchip');
@@ -155,18 +137,24 @@ function buildOrder(q, body) {
   });
 
   shuffled.forEach(w => {
-    const chip = el('div', 'wchip', w);
+    const chip = document.createElement('div');
+    chip.className = 'wchip';
+    chip.textContent = w;
     chip.addEventListener('click', () => {
       if (chip.classList.contains('used')) return;
       chip.classList.add('used');
       _ordSel.push(w);
-      const nc = el('div', 'wchip', w);
+      const nc = document.createElement('div');
+      nc.className = 'wchip';
+      nc.textContent = w;
       ansRow.appendChild(nc);
     });
     bank.appendChild(chip);
   });
 
-  const chkBtn = el('button', 'chk-btn', 'Kontrol');
+  const chkBtn = document.createElement('button');
+  chkBtn.className = 'chk-btn';
+  chkBtn.textContent = 'Kontrol';
   chkBtn.style.marginTop = '8px';
   chkBtn.addEventListener('click', () => {
     chkBtn.disabled = true;
@@ -177,24 +165,23 @@ function buildOrder(q, body) {
     ok ? onCorrect(q, 15) : onWrong(q, `Doğru: "${q.ans}"`);
   });
 
-  body.appendChild(ansRow);
-  body.appendChild(bank);
-  body.appendChild(chkBtn);
+  area.appendChild(ansRow);
+  area.appendChild(bank);
+  area.appendChild(chkBtn);
 }
 
 function onCorrect(q, xpAmt = 10) {
   session.correct++;
   session.streak++;
-  const bonus = session.streak > 2 ? 5 : 0;
-  addXP(xpAmt + bonus);
+  addXP(xpAmt + (session.streak > 2 ? 5 : 0));
   showFeedback(true, q.fb);
-  showNext();
+  document.getElementById('nxbtn').style.display = 'block';
 }
 
 function onWrong(q, prefix = '') {
   session.streak = 0;
-  showFeedback(false, `${prefix}${prefix ? ' — ' : ''}${q.fb}`);
-  showNext();
+  showFeedback(false, (prefix ? prefix + ' — ' : '') + q.fb);
+  document.getElementById('nxbtn').style.display = 'block';
 }
 
 function showFeedback(ok, msg) {
@@ -203,11 +190,6 @@ function showFeedback(ok, msg) {
   fb.className = `qp-fb ${ok ? 'ok' : 'ko'}`;
   fb.textContent = (ok ? '✅ Doğru! ' : '❌ ') + msg;
   fb.style.display = 'block';
-}
-
-function showNext() {
-  const btn = document.getElementById('nxbtn');
-  if (btn) btn.style.display = 'block';
 }
 
 function nextQuestion() {
@@ -223,13 +205,4 @@ function finishSession() {
   addXP(stars * 20);
   markRoomDone(session.country.id, session.room.id, stars);
   if (_onFinish) _onFinish({ stars, correct: session.correct, total: session.questions.length });
-}
-
-// ── Yardımcı ──
-function el(tag, className = '', text = '', id = '') {
-  const e = document.createElement(tag);
-  if (className) e.className = className;
-  if (text) e.textContent = text;
-  if (id) e.id = id;
-  return e;
 }
